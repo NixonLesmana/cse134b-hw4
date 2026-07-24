@@ -1,0 +1,75 @@
+@layer layout {
+    body>nav {
+        border-block-end: var(--border);
+    }
+
+    body>nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-1) var(--space-2);
+    }
+
+    body>nav li+li {
+        margin-block-start: 0;
+    }
+
+    main {
+        max-width: var(--measure);
+        margin-inline: auto;
+        padding: var(--space-3);
+    }
+
+    article figure {
+        float: left;
+        width: 10rem;
+        margin: 0 var(--space-2) var(--space-1) 0;
+        padding: var(--space-2);
+        border: var(--border);
+        background: var(--panel);
+    }
+
+    article figure img {
+        display: block;
+        margin-inline: auto;
+    }
+
+    main>section {
+        clear: both;
+        margin-block-start: var(--space-3);
+    }
+
+    details {
+        padding: var(--space-1) 0;
+        border-block-start: var(--border);
+    }
+
+    details>p {
+        margin-block: var(--space-1) var(--space-2);
+        padding-inline-start: var(--space-2);
+    }
+
+    details:last-of-type {
+        border-block-end: var(--border);
+    }
+
+    summary {
+        cursor: pointer;
+        font-weight: 700;
+    }
+
+    @media (max-width: 40rem) {
+        body>nav ul {
+            display: block;
+        }
+
+        body>nav li+li {
+            margin-block-start: var(--space-1);
+        }
+
+        article figure {
+            float: none;
+            width: auto;
+            margin: 0 0 var(--space-2);
+        }
+    }
+}
