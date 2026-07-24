@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The CSE Cheese Society</title>
+    <meta name="description" content="Home page for The CSE Cheese Society.">
+    <link rel="stylesheet" href="styles/tokens.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/site.css">
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" aria-label="The CSE Cheese Society home">
+            <img src="images/logo.svg" alt="" width="56" height="56">
+            <span>The CSE Cheese Society</span>
+        </a>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="guide/index.html">Guide</a></li>
+            <li><a href="guide/fresh.html">Fresh</a></li>
+            <li><a href="guide/soft.html">Soft</a></li>
+            <li><a href="guide/blue.html">Blue</a></li>
+            <li><a href="guide/hard.html">Hard</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section aria-labelledby="home-title">
+            <h1 id="home-title">The CSE Cheese Society</h1>
+
+            <p>
+                The CSE Cheese Society was founded in 2024, when a seminar ended
+                early and a cheese plate did not.
+            </p>
+
+            <p>
+                Our mission is simple: taste widely, take notes, and never let
+                processed cheese food into the building.
+            </p>
+
+            <p>
+                <a href="guide/index.html">Read the Guide</a>
+            </p>
+
+            <p>
+                <button type="button" commandfor="cheese-fact" command="toggle-popover">
+                    Cheese fact
+                </button>
+            </p>
+
+            <div id="cheese-fact" popover aria-labelledby="cheese-fact-title">
+                <h2 id="cheese-fact-title">Cheese Fact</h2>
+                <p>
+                    The word "cheese" comes from the Latin <i lang="la">caseus</i>, which
+                    also gives us the word "casein," the main milk protein.
+                </p>
+            </div>
+        </section>
+
+        <section aria-labelledby="families-title">
+            <h2 id="families-title">The Four Families</h2>
+
+            <p>
+                Fresh, soft-ripened, blue, and hard cheeses each have their own page
+                in the Society guide.
+            </p>
+
+            <ul>
+                <li><a href="guide/fresh.html">Fresh cheeses</a></li>
+                <li><a href="guide/soft.html">Soft-ripened cheeses</a></li>
+                <li><a href="guide/blue.html">Blue cheeses</a></li>
+                <li><a href="guide/hard.html">Hard cheeses</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <aside aria-labelledby="cheese-month-title">
+        <h2 id="cheese-month-title">Cheese of the Month</h2>
+
+        <img src="images/cheese-hard.svg" alt="Aged Gouda, an aged hard cheese wedge with crystals" width="160"
+            height="120">
+
+        <p>
+            <strong>Aged Gouda</strong>
+        </p>
+
+        <p>
+            Aged Gouda is this month's pick: dense, nutty, and full of crystals
+            earned through long aging.
+        </p>
+
+        <p>
+            <a href="guide/hard.html">Visit the hard cheese family</a>
+        </p>
+    </aside>
+
+    <footer>
+        <p>Copyright 2026 The CSE Cheese Society. Cheese responsibly.</p>
+    </footer>
+</body>
+
+</html>

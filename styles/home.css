@@ -1,0 +1,106 @@
+@layer layout {
+    body {
+        --nav-width: 11rem;
+        --aside-width: 18rem;
+
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "nav    main   aside"
+            "footer footer footer";
+        grid-template-columns: var(--nav-width) minmax(0, 1fr) var(--aside-width);
+        grid-template-rows: auto 1fr auto;
+        min-height: 100svh;
+    }
+
+    body>header,
+    body>nav,
+    body>main,
+    body>aside,
+    body>footer {
+        min-width: 0;
+    }
+
+    body>header {
+        grid-area: header;
+    }
+
+    body>nav {
+        grid-area: nav;
+        border-inline-end: var(--border);
+    }
+
+    body>main {
+        grid-area: main;
+        padding: var(--space-4) var(--space-3);
+    }
+
+    body>aside {
+        grid-area: aside;
+        padding: var(--space-3) var(--space-2);
+        border-inline-start: var(--border);
+        background: var(--panel);
+    }
+
+    body>footer {
+        grid-area: footer;
+    }
+
+    main>section {
+        max-width: var(--measure);
+    }
+
+    main>section+section {
+        margin-block-start: var(--space-4);
+    }
+
+    main p:has(button) {
+        margin-block-start: var(--space-1);
+    }
+
+    body>aside figure {
+        margin-block: var(--space-2);
+    }
+
+    body>aside img {
+        display: block;
+        inline-size: min(100%, 12rem);
+        height: auto;
+    }
+
+    #cheese-fact {
+        max-width: min(28rem, calc(100vw - 2rem));
+        padding: var(--space-2);
+        border: var(--border);
+        background: var(--paper);
+        color: var(--ink);
+    }
+
+    @media (max-width: 48rem) {
+        body {
+            grid-template-areas:
+                "header"
+                "nav"
+                "main"
+                "aside"
+                "footer";
+            grid-template-columns: minmax(0, 1fr);
+            grid-template-rows: auto auto auto auto auto;
+        }
+
+        body>nav {
+            border-inline-end: 0;
+            border-block-end: var(--border);
+        }
+
+        body>main,
+        body>aside {
+            padding: var(--space-2);
+        }
+
+        body>aside {
+            border-inline-start: 0;
+            border-block-start: var(--border);
+        }
+    }
+}
