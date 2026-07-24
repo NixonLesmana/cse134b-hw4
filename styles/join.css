@@ -1,0 +1,117 @@
+@layer layout {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100svh;
+    }
+
+    body>nav {
+        border-block-end: var(--border);
+    }
+
+    body>nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-1) var(--space-2);
+    }
+
+    body>nav li+li {
+        margin-block-start: 0;
+    }
+
+    body>main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: var(--space-3);
+    }
+
+    form {
+        width: min(100%, 32rem);
+        padding: var(--space-3);
+        border: var(--border);
+        border-block-start: var(--rule);
+        background: var(--panel);
+    }
+
+    label,
+    legend {
+        display: block;
+        font-weight: 700;
+    }
+
+    input,
+    select {
+        width: 100%;
+        margin-block-start: 0.25rem;
+        padding: 0.45rem;
+        border: var(--border);
+        background: var(--paper);
+        color: var(--ink);
+        font: inherit;
+    }
+
+    fieldset {
+        margin: 0 0 var(--space-2);
+        padding: var(--space-2);
+        border: var(--border);
+    }
+
+    fieldset label {
+        font-weight: 400;
+    }
+
+    fieldset input {
+        width: auto;
+        margin-inline-end: 0.35rem;
+    }
+
+    .form-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-1);
+        margin-block-start: var(--space-2);
+    }
+
+    button[type="submit"] {
+        background: var(--accent);
+        color: var(--paper);
+    }
+
+    button[type="submit"]:hover {
+        background: var(--paper);
+        color: var(--accent);
+    }
+
+    dialog {
+        max-width: min(32rem, calc(100vw - 2rem));
+        padding: var(--space-3);
+        border: var(--border);
+        background: var(--paper);
+        color: var(--ink);
+    }
+
+    dialog::backdrop {
+        background: rgb(0 0 0 / 0.25);
+    }
+
+    @media (max-width: 40rem) {
+        body>nav ul {
+            display: block;
+        }
+
+        body>nav li+li {
+            margin-block-start: var(--space-1);
+        }
+
+        body>main {
+            align-items: stretch;
+            padding: var(--space-2);
+        }
+
+        form {
+            padding: var(--space-2);
+        }
+    }
+}
