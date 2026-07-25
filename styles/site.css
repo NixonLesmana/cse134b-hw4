@@ -78,5 +78,21 @@
         @view-transition {
             navigation: auto;
         }
+
+        .cheese-fresh {
+            view-transition-name: cheese-fresh;
+        }
+
+        .cheese-soft {
+            view-transition-name: cheese-soft;
+        }
+
+        .cheese-blue {
+            view-transition-name: cheese-blue;
+        }
+
+        .cheese-hard {
+            view-transition-name: cheese-hard;
+        }
     }
 }
