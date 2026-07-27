@@ -50,16 +50,8 @@
         max-width: var(--measure);
     }
 
-    main>section+section {
-        margin-block-start: var(--space-4);
-    }
-
     main p:has(button) {
         margin-block-start: var(--space-1);
-    }
-
-    body>aside figure {
-        margin-block: var(--space-2);
     }
 
     body>aside img {
