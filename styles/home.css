@@ -60,6 +60,16 @@
         height: auto;
     }
 
+    button[command="toggle-popover"] {
+        background: var(--accent);
+        color: var(--paper);
+    }
+
+    button[command="toggle-popover"]:hover {
+        background: var(--paper);
+        color: var(--accent);
+    }
+
     #cheese-fact {
         max-width: min(28rem, calc(100vw - 2rem));
         padding: var(--space-2);
